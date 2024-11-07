@@ -43,6 +43,8 @@ vim.keymap.set('n', '<leader>ws', ':w !sudo tee % > /dev/null<CR>', { silent = t
 vim.keymap.set('n', '<Tab>', ':bnext<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<S-Tab>', ':bprevious<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>bd', ':bdelete<CR>', { noremap = true, silent = true })
+vim.keymap.set({ 'n', 'v' }, '<leader>h', '^', { noremap = true, silent = true })
+vim.keymap.set({ 'n', 'v' }, '<leader>l', '$', { noremap = true, silent = true })
 
 -- Navigate vim panes better
 vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
@@ -79,7 +81,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- The "greatest remap ever": paste from the unnamed register and delete the copied text from the default register
 -- vim.keymap.set("x", "<leader>p", [["_dP]])
 -- Paste from the clipboard in normal and visual modes
-vim.keymap.set("v", "<leader>p", [["+p]])
+-- vim.keymap.set("v", "<leader>p", [["+p]])
 -- Paste the entire line from the clipboard in normal mode
 vim.keymap.set("n", "<leader>P", [["+P]])
 
@@ -116,13 +118,13 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/cI<Left><Left><
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- In normal mode, quit without saving
-vim.keymap.set("n", "QQ", ":q!<CR>", { noremap = false })
+-- vim.keymap.set("n", "QQ", ":q!<CR>", { noremap = false })
 -- In normal mode, save the file
-vim.keymap.set("n", "WW", ":w!<CR>", { noremap = false })
+-- vim.keymap.set("n", "WW", ":w!<CR>", { noremap = false })
 -- In normal mode, move to the end of the line
-vim.keymap.set({"n", "v"}, "E", "$", { noremap = false })
+-- vim.keymap.set({"n", "v"}, "E", "$", { noremap = false })
 -- In normal mode, move to the beginning of the line
-vim.keymap.set({"n", "v"}, "B", "^", { noremap = false })
+-- vim.keymap.set({"n", "v"}, "B", "^", { noremap = false })
 -- In normal mode, toggle transparency
 vim.keymap.set("n", "TT", ":TransparentToggle<CR>", { noremap = true })
 
